@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Generador de Contraseñas</title>
+  <link rel='shortcut icon' type='image/x-icon' href='assets/favicon.ico' />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <div id="page" class="flex-container wrap">
+
+    <div class="flex-side">
+      <div class="center-content">
+        <h1>Generador de Contraseñas</h1>
+      </div>
+
+      <div class="center-content form">
+        <label class="container">Números
+          <input type="checkbox" id="numbers" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+        <label class="tip">Contiene números: 1 2 ... 9 0</label>
+
+        <label class="container">Letras mayúsculas
+          <input type="checkbox" id="uppercases" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+        <label class="tip">Contiene letras mayúsculas: A B ... Y Z</label>
+
+        <label class="container">Letras minúsculas
+          <input type="checkbox" id="lowercases" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+        <label class="tip">Contiene letras minúsculas: a b ... y z</label>
+
+        <label class="container">Símbolos
+          <input type="checkbox" id="symbols" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+        <label class="tip">Contiene símbolos: ! ? # $ % & * + - =</label>
+
+        <label class="container">Eliminar caracteres similares
+          <input type="checkbox" id="similars">
+          <span class="checkmark"></span>
+        </label>
+        <label class="tip">No hay caracteres ambiguos: 1 l I ! 0 O Q 8 B</label>
+
+        <div>
+          <button id="submit-btn" class="btn submit-btn">Generar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-side result">
+      <div class="center-results">
+        <h1>Resultado de contraseña</h1> 
+        <div class="flex-container password-result">
+          <input type="text" id="password-1" name="password-1" spellcheck="false">
+          <button class="btn copy-btn no-wrap" onclick="copyPassword('password-1')">Copiar</button>
+        </div>
+
+        <!-- <div class="flex-container password-result">
+          <input type="text" id="password-2" name="password-2" spellcheck="false">
+          <button class="btn copy-btn no-wrap" onclick="copyPassword('password-2')">Copy</button>
+        </div>
+
+        <div class="flex-container password-result">
+          <input type="text" id="password-3" name="password-3" spellcheck="false">
+          <button class="btn copy-btn no-wrap" onclick="copyPassword('password-3')">Copy</button>
+        </div> -->
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/password-generator.js"></script>
+</body>
+
+</html>
